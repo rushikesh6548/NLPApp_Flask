@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+      /* Center all content within the container element */
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+    </style>
+
+    {% if title %}
+        <title>NLPApp - {{ title }}</title>
+    {% else %}
+        <title>Flask Blog</title>
+    {% endif %}
+
+</head>
+<body>
+    <div class="container">
+        {% block bodycontent %}
+        {% endblock bodycontent %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block bodycontent %}
+
+    <form action="/perform_sentiment" method="post">
+      <label>Type your text here</label><br>
+      <textarea name="sentiment_text"></textarea><br>
+      <input type="submit" value="Perform Sentiment Analysis">
+    </form>
+    <br>
+
+    {% if response %}
+        <br>
+        <p>{{ response }}</p>
+    {% endif %}
+
+
+
+{% endblock bodycontent %}
